@@ -83,10 +83,10 @@
     </section>
     <!-- Contact Section End -->
 
-  <!-- Review Section Start -->
-  <section class="review" id="review">
-    <h2>Leave a Review</h2>
-    <form id="review-form" action="http://localhost:3000/reviews" method="POST">
+    <!-- Review Section Start -->
+    <section class="review" id="review">
+      <h2>Leave a Review</h2>
+      <form id="review-form">
         <input type="text" name="name" placeholder="Your Name" required />
         <div class="star-rating">
           <input type="radio" id="5-stars" name="rating" value="5" />
@@ -101,15 +101,15 @@
           <label for="1-stars" class="star">&#9733;</label>
         </div>
         <textarea name="review" placeholder="Write your review here..." required></textarea>
-        <button type="submit">Submit</button>
+        <button type="button" onclick="submitReview()">Submit</button>
       </form>
-  </section>
-  <!-- Review Section End -->
+    </section>
+    <!-- Review Section End -->
 
-  <!-- Reservation Section Start -->
-  <section class="reservation" id="reservation">
-    <h2>Make a Reservation</h2>
-    <form id="reservation-form" action="http://localhost:3000/reservations" method="POST">
+    <!-- Reservation Section Start -->
+    <section class="reservation" id="reservation">
+      <h2>Make a Reservation</h2>
+      <form id="reservation-form">
         <input type="text" name="name" placeholder="Your Name" required />
         <input type="tel" name="phone" placeholder="Active Phone Number" required />
         <select name="service" required>
@@ -119,16 +119,26 @@
           <option value="Facial Treatments">Facial Treatments</option>
         </select>
         <input type="datetime-local" name="datetime" min="2023-01-01T09:00" max="2023-12-31T21:00" required />
-        <button type="submit">Submit</button>
+        <button type="button" onclick="submitReservation()">Submit</button>
       </form>
-  </section>
-  <!-- Reservation Section End -->
-
-
+    </section>
+    <!-- Reservation Section End -->
 
     <!-- Feather icons -->
     <script>
       feather.replace();
+      
+      function submitReview() {
+        // Logic to handle review submission (e.g., send to backend)
+        alert('Review submitted!');
+        document.getElementById('review-form').reset();
+      }
+
+      function submitReservation() {
+        // Logic to handle reservation submission (e.g., send to backend)
+        alert('Reservation submitted!');
+        document.getElementById('reservation-form').reset();
+      }
     </script>
   </body>
 </html>
