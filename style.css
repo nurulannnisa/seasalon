@@ -1,0 +1,270 @@
+:root {
+  --primary: #e94c7b;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgb(1, 1, 1, 0.8);
+  border-bottom: 1px solid #560b22;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Home Section */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg);
+  text-align: center;
+}
+
+.home .content h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.home .content p {
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+/* Menu Section */
+.menu {
+  padding: 5rem 7%;
+  background-color: var(--bg);
+  text-align: center;
+}
+
+.menu h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.service-item {
+  margin-bottom: 3rem;
+}
+
+.service-item img {
+  width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.service-item p {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: 5rem 7%;
+  background-color: var(--bg);
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.contact p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Review Section */
+.review {
+  padding: 5rem 7%;
+  background-color: var(--bg);
+  text-align: center;
+}
+
+.review h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.review form {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.review input[type="text"] {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.star-rating {
+  direction: rtl;
+  font-size: 2rem;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  color: #ccc;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.star-rating input:checked ~ label {
+  color: var(--primary);
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: var(--primary);
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-top: 1rem;
+}
+
+/* Reservation Section */
+.reservation {
+  padding: 5rem 7%;
+  background-color: var(--bg);
+  text-align: center;
+}
+
+.reservation h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.reservation form {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.reservation input[type="text"],
+.reservation input[type="tel"],
+.reservation select,
+.reservation input[type="datetime-local"] {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c43d6a;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  html {
+    font-size: 50%;
+  }
+}
